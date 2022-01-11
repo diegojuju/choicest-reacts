@@ -1,6 +1,9 @@
 import logo from './logo.jpg';
 import './App.css';
-import { NavBar } from './components/NavBar/navBar';
+import { NavBar } from './components/NavBar';
+import ItemListConteiner from './components/ItemListConteiner';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
@@ -11,6 +14,7 @@ function App() {
         <p>
          CHOICEST tu elección nos importa.
         </p>
+        <ItemListConteiner gretting= "Bienvenidos a CHOICEST" />
       </header>
     </div>
   );
