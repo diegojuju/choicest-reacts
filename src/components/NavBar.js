@@ -13,7 +13,7 @@ function NavBar () {
             <Nav className="me-auto">
               <Nav.Link href="#nosotros">Nosotros</Nav.Link>
               <Nav.Link href="#test">Test</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown title="Funcionalidades" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Profesionales</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">Links mas usados</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3"></NavDropdown.Item>
