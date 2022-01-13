@@ -1,7 +1,7 @@
 import logo from './logo.jpg';
 import './App.css';
-import { NavBar } from './components/NavBar';
-import ItemListConteiner from './components/ItemListConteiner';
+import  NavBar  from './components/NavBar';
+import ItemListConteiner from './components/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 

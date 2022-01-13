@@ -5,7 +5,7 @@ import CartWidget from './CartWidget';
 function NavBar () {
     return (
 
-        <Navbar bg="dark" expand="lg">
+        <Navbar bg="ligth" expand="lg">
         <Container>
           <Navbar.Brand href="#home">CHOICEST</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

@@ -1,4 +1,6 @@
-const ItemListConteiner = (props) => {
+import ItemCount from "./ItemCount";
+
+const ItemListContainer = (props) => {
     console.log(props)
     //Logica a desarrollar   
     return(
@@ -6,8 +8,10 @@ const ItemListConteiner = (props) => {
         <h1>Test a medida de tu elección</h1>
         <h2>Profesionales personalizados</h2>
         <h3>{props.gretting}</h3>
+        <h3>Poner style al contador</h3>
+        <ItemCount />
         </div>
 // lo que queremos que se renderice
     )
 }
-export default ItemListConteiner    
+export default ItemListContainer    
