@@ -1,7 +1,8 @@
 import logo from './logo.jpg';
 import './App.css';
 import  NavBar  from './components/NavBar';
-import ItemListConteiner from './components/ItemListContainer';
+import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -14,7 +15,8 @@ function App() {
         <p>
          CHOICEST tu elección nos importa.
         </p>
-        <ItemListConteiner gretting= "Bienvenidos a CHOICEST" />
+        <ItemListContainer gretting= "Bienvenidos a CHOICEST" />
+        <ItemDetailContainer />
       </header>
     </div>
   );
