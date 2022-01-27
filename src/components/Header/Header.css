@@ -2,23 +2,23 @@
     .estiloFondoHeader {
         background-size: cover;
         background-repeat: round;        
-        height: 30vh;
+        height: 40vh;
         background-attachment: fixed;}}
 
 @media only screen and (min-width: 416px) and (max-width: 966px) {
     .estiloFondoHeader {        
-        height: 7vh; }}
+        height: 15vh; }}
 
 @media only screen and (max-width: 415px) {
     .estiloFondoHeader {
         background-size: cover;
         background-position: center;
-        height: 5vh; }}    
+        height: 15vh; }}    
 
 .estiloFondoHeader {    
    
     width: 100%;
-    border-bottom: rgb(250, 49, 49) 3px solid;}
+    border-bottom: rgb(20, 8, 70) 5px solid;}
 
 .fondoHeader {
     background-image: url("https://imagenes.universia.net/gc/net/images/educacion/t/te/tes/test_vocacional_1582742442041.jpg"); }

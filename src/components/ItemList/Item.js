@@ -1,20 +1,32 @@
-import { Link } from "react-router-dom";
+import Card from "react-bootstrap/Card"
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import Button from 'react-bootstrap/Button'
+import Nav from 'react-bootstrap/Nav'
+import {Link} from "react-router-dom"
+import '../../styles/style.css';
 
-// const Item = ({ id, title, price, pictureUrl, description }) => {
-// Definición de la función para las props de FakeStoreApi
-const Item = ({ id, title, price, image, description }) => {
-  return (
-    <Link to={`/products/${id}`}>
-      <div>
-        <h1>Item</h1>
-        <h2>{title}</h2>
-        <h2>{description}</h2>
-        <h3>{price}</h3>
-        {/* <img alt={title} src={pictureUrl}></img> */}
-        {/* Imagen de FakeStoreApi */}
-        <img alt={title} src={image}></img>
-      </div>
-    </Link>
-  );
-};
-export default Item;
+//Componente encargado de mostrar un breve detalle del producto
+function Item({item}) {
+
+    const {id,title,description,price,pictureUrl} = item  
+    
+    return (
+        <>      
+            <Card border="info" className="m-5 shadow mb-5 card-item bg-white rounded" key={id} style={{maxWidth:'17rem'}}>
+                <Nav.Link as={Link} to={`/item/${id}`}>
+                    <Card.Header className="fw-bold text-muted" >{title}</Card.Header>
+                    <Card.Body>
+                        <Card.Img variant="top" src={pictureUrl} className="img-detail "/>                  
+                        <Card.Text className='p-2 m-1 fw-bold h5'>u$s: {price}</Card.Text>                 
+                        <Card.Title className="m-1 p-1 lead text-muted">{description}</Card.Title>
+                        <ButtonGroup aria-label="Basic example">
+                            <Button variant="secondary" >Detalles</Button>                        
+                        </ButtonGroup>                       
+                    </Card.Body>
+                </Nav.Link>
+            </Card>            
+        </>
+    )
+}
+
+export default Item

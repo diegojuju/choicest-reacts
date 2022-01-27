@@ -19,7 +19,7 @@ function CategoriesTitle(){
 
     return (
         <>
-            <h2 className='text-danger m-2 p-2 title'>{title}</h2>         
+            <h2 className='text-dark m-2 p-2 title'>{title}</h2>         
         </>
     )
 }

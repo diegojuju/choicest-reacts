@@ -1,41 +1,64 @@
-import { useState } from "react";
-import { Button } from "react-bootstrap";
+import { useState } from "react"
+import {Link} from "react-router-dom"
+import Card from 'react-bootstrap/Card'
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
+import Button from 'react-bootstrap/Button'
 
-const ItemCount = ({ stock, initial }) => {
-  const [count, setCount] = useState(initial);
+//componente encargado de realizar la logica de sumar o restar en cantidad requerida de items deseados, si no hay stock de un producto el boton de sumar o restar esta deshabilitado.
+function ItemCount({stock,initial,onAdd}) {
+    
+    const [count,setCount]= useState(initial)
+    const [btnAdd,setBtnAdd] = useState(true)
+    const [stockItems,setStockItems] =useState(stock)
 
-  const onDecrease = () => {
-    const newValue = count - 1;
-    if (newValue >= initial) {
-      setCount(newValue);
+    function addCount() {
+        if (count<stock){
+            setCount(count+1)
+        }        
     }
-  };
-  const onIncrease = () => {
-    const newValue = count + 1;
-    if (newValue <= stock) {
-      setCount(newValue);
+    
+    function remCount(){    
+        if (count>1){
+            setCount(count-1)
+        } 
     }
-  };
 
-  const onAdd = () => {
-    const message = `Agregaste ${count} producto`;
-    count === 1 ? alert(message) : alert(`${message}s`);
-  };
-  return (
-    <div className="d-flex flex-column">
-      <div className="d-flex mt-3">
-        <Button variant="primary" onClick={onDecrease} className="px-3 mx-3">
-          -
-        </Button>{" "}
-        <h3 className="px-3 mx-3">{count}</h3>
-        <Button variant="primary" onClick={onIncrease} className="px-3 mx-3">
-          +
-        </Button>{" "}
-      </div>
-      <Button variant="danger" onClick={onAdd} className="mt-3">
-        Agregar al Carrito
-      </Button>{" "}
-    </div>
-  );
-};
-export default ItemCount;
+    const addItem=()=>{
+        onAdd(count)
+        setBtnAdd(false)
+        setStockItems(stockItems-count)
+    } 
+       
+    return (
+        <>
+            <Card.Body>                 
+                <Card.Text className="fw-bold">Cantidad: {count}</Card.Text>
+                <Card.Text className="text-secondary">Unidades disponibles: {stockItems}</Card.Text>
+                <ButtonGroup aria-label="Basic example">
+                {stock>0?//comprobacion del stock, en caso de no haber directamente el boton se deshabilita
+                    <>
+                        {btnAdd?
+                            <>
+                                <Button variant="secondary" onClick={remCount}>-</Button>
+                                <Button variant="secondary" onClick={addItem}>Agregar al carrito</Button>
+                                <Button variant="secondary" onClick={addCount}>+</Button>                       
+                            </>
+                            :    
+                            <>
+                                <Button variant="primary" as={Link} to ={`/`}>Seguir comprando</Button>        
+                                <Button variant="success" as={Link} to ={`/cart`}>Terminar Compra</Button>
+                            </>                   
+                        }
+                    </>
+                    :
+                    <>
+                       <Button variant="secondary" size="lg" disabled>Producto sin stock</Button>{' '}
+                    </>
+                }
+                </ButtonGroup>
+            </Card.Body>
+        </>
+    )
+}
+
+export default ItemCount
