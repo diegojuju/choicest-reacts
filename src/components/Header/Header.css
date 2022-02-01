@@ -18,7 +18,7 @@
 .estiloFondoHeader {    
    
     width: 100%;
-    border-bottom: rgb(20, 8, 70) 5px solid;}
+    border-bottom:#673ab7 5px solid;}
 
 .fondoHeader {
     background-image: url("https://imagenes.universia.net/gc/net/images/educacion/t/te/tes/test_vocacional_1582742442041.jpg"); }

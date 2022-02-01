@@ -12,9 +12,9 @@ function Item({item}) {
     
     return (
         <>      
-            <Card border="info" className="m-5 shadow mb-5 card-item bg-white rounded" key={id} style={{maxWidth:'17rem'}}>
+            <Card border="info" className="m-5 shadow mb-5 card-item bg-white rounded" key={id} style={{maxWidth:'17rem', }}>
                 <Nav.Link as={Link} to={`/item/${id}`}>
-                    <Card.Header className="fw-bold text-muted" >{title}</Card.Header>
+                    <Card.Header className="fw-bold text-muted" style={{color: '#ff3d00'}} >{title}</Card.Header>
                     <Card.Body>
                         <Card.Img variant="top" src={pictureUrl} className="img-detail "/>                  
                         <Card.Text className='p-2 m-1 fw-bold h5'>u$s: {price}</Card.Text>                 

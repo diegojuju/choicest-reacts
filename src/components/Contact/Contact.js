@@ -8,7 +8,7 @@ function Contact() {
     return (
         <>
             <Container fluid style={{display:'flex' ,justifyContent:'center', textAlign:'center'}}>
-                <Card border="info" className="m-5 shadow p-3 bg-white rounded" style={{maxWidth:'30rem'}} >
+                <Card border="info" className="m-5 shadow p-3 bg-white rounded" style={{maxWidth:'30rem',color: '#001064' }} >
                     <Card.Header className="fw-bold">Contacto</Card.Header>
                     <Card.Body>     
                         <Card.Text> Por favor comunícate con nosotros en caso de consulta</Card.Text>

@@ -13,14 +13,14 @@ function NavBar(){
             <Navbar bg="dark" variant="dark" expand="lg" className="d-flex justify-content-center title" sticky="top">
                 <Container className="d-flex justify-content-center">                    
                     <Nav.Link as={Link} to="/">
-                        <Navbar.Brand style={{fontSize:'3 rem'}}>Tu proxima carrera a un paso</Navbar.Brand>                    
+                        <Navbar.Brand style={{fontSize:' 30px' ,color: '#ff3d00'}}>Tu próxima carrera a un paso</Navbar.Brand>                    
                     </Nav.Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className="me-auto" style={{fontSize:' 20px'}}>
                             <Nav.Link as={Link} to="/categories/tests">Test vocacionales</Nav.Link>
                             <Nav.Link as={Link} to="/categories/profesionales">Profesionales</Nav.Link>
-                            <Nav.Link as={Link} to="/categories/modalidad">Modalidad feedback Test</Nav.Link>      
+                            <Nav.Link as={Link} to="/categories/modalidad">Modalidad feedback</Nav.Link>      
                             <Nav.Link as={Link} to="/contact">Contacto</Nav.Link>                                        
                         </Nav>
                     </Navbar.Collapse>

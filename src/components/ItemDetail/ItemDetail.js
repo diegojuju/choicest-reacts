@@ -17,7 +17,7 @@ function ItemDetail({item}){
         
     return (
         <>       
-            <h1 className='text-danger m-3 title'>Conocé mas</h1> 
+            <h1 className='m-3 title' style={{ color: '#001064' }}>Conocé mas</h1> 
             <Container className="justify-content-center align-item-center">            
                 <Row className="justify-content-center">
                     <Col>

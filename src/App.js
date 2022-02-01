@@ -15,7 +15,7 @@ import Page404 from "./components/404/Page404";
 
 function App() {
 	
-	const greeting = 'Bienvenidos a CHOICEST'
+	const greeting = <h1 style={{ color: '#001064' }}>Bienvenidos a CHOICEST</h1>
 
   return (    
 		<CartContextProvider>
