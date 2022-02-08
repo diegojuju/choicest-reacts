@@ -45,7 +45,7 @@ function ItemCount({stock,initial,onAdd}) {
                             </>
                             :    
                             <>
-                                <Button variant="primary" as={Link} to ={`/`}>Seguir comprando</Button>        
+                                <Button variant="primary" color="primary" as={Link} to ={`/`}>Seguir comprando</Button>        
                                 <Button variant="success" as={Link} to ={`/cart`}>Terminar Compra</Button>
                             </>                   
                         }
