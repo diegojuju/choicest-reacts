@@ -57,10 +57,10 @@ function FormCart({formData,handleOnSubmit,handleOnChange,generateOrder,clearCar
                 <div>
                     <h5 className="mt-2">Medios de Pago:</h5>
                     <label className="radio-inline m-1">
-                        <input type="radio" name="movimiento" value="Venta" disabled/>Tarjeta de credito 
+                        <input type="radio" name="movimiento" value="Venta" enabled/>Tarjeta de credito 
                     </label>
                     <label className="radio-inline m-1">
-                        <input type="radio" name="movimiento" value="Renta" disabled/>Mercado Pago 
+                        <input type="radio" name="movimiento" value="Renta" enabled/>Mercado Pago 
                     </label>
                     <label className="radio-inline m-1">
                         <input type="radio" name="movimiento" value="Traspaso" defaultChecked/>Efectivo 
