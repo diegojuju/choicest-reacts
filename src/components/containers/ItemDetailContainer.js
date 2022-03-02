@@ -37,7 +37,7 @@ function ItemDetailContainer() {
                         :
                         <>
                             <h1 className='text-info'>Producto no encontrado</h1>
-                            <h2 className='text-info'>Por favor volvé a elegir un producto de nuestro catalogo</h2>
+                            <h2 className='text-info'>Por favor elegir un producto de nuestro catalogo</h2>
                             <Nav.Link as={Link} to="/" style={{fontSize:'1.5rem'}}>
                                 Volvé al sitio pulsando aquí                    
                             </Nav.Link>

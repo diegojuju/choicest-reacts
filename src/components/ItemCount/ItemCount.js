@@ -17,7 +17,7 @@ function ItemCount({stock,initial,onAdd}) {
         }        
     }
     
-    function remCount(){    
+    function restCount(){    
         if (count>1){
             setCount(count-1)
         } 
@@ -39,7 +39,7 @@ function ItemCount({stock,initial,onAdd}) {
                     <>
                         {btnAdd?
                             <>
-                                <Button variant="secondary" onClick={remCount}>-</Button>
+                                <Button variant="secondary" onClick={restCount}>-</Button>
                                 <Button variant="secondary" onClick={addItem}>Agregar al carrito</Button>
                                 <Button variant="secondary" onClick={addCount}>+</Button>                       
                             </>

@@ -8,11 +8,11 @@ import '../../styles/style.css';
 //Componente encargado de mostrar un breve detalle del producto
 function Item({item}) {
 
-    const {id,title,description,price,pictureUrl} = item  
+    const {id,title,description,price,pictureUrl} = item
     
     return (
         <>      
-            <Card border="info" className="m-5 shadow mb-5 card-item bg-white rounded" key={id} style={{maxWidth:'17rem', }}>
+            <Card border="info" className="m-5 shadow mb-5 card-item bg-white rounded" key={id} style={{maxWidth:'17rem' }}>
                 <Nav.Link as={Link} to={`/item/${id}`}>
                     <Card.Header className="fw-bold text-muted" style={{color: '#ff3d00'}} >{title}</Card.Header>
                     <Card.Body>
